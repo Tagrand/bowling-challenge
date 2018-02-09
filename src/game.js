@@ -14,7 +14,7 @@ class Game {
   play(rolls) {
     let index = 0;
     rolls.forEach((roll) => {
-      this.addRoll(index, roll)
+      this.addRoll(index, roll);
       if (index > 0) { this.addRoll(index - 1, roll); }
       if (index > 1) { this.addRoll(index - 2, roll); }
       if (this.frameFinished(index)) { index += 1; }
