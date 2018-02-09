@@ -5,7 +5,7 @@ describe('StrikeRound', () => {
   let finalFrame;
 
   beforeEach(() => {
-    finalFrame = new LastFrame(3, 3);
+    finalFrame = new LastFrame();
   });
 
   function chainOfRolls(...rolls) {

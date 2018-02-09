@@ -1,15 +1,18 @@
 /* eslint-env jasmine */
 
 const Frame = require('../../src/frame')
+const LastFrame = require('../../src/lastFrame')
 const Game = require('../../src/game')
 
 describe('Game feature', () => {
   let game;
   let frame;
+  let lastFrame;
 
   beforeEach(() => {
     frame = Frame
-    game = new Game(frame);
+    lastFrame = LastFrame
+    game = new Game(frame, lastFrame);
   });
 
   describe('Initialise', () => {

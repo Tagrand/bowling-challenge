@@ -2,13 +2,13 @@ const GAME_LENGTH = 10;
 const FINAL_GAME_STRIKE = 3;
 
 class Game {
-  constructor(frame) {
+  constructor(frame, Last) {
     this.board = [];
     this.Frames = frame;
     for (let i = 0; i < GAME_LENGTH - 1; i += 1) {
       this.board.push(new this.Frames());
     }
-    this.board.push(new this.Frames(FINAL_GAME_STRIKE, FINAL_GAME_STRIKE));
+    this.board.push(new Last(FINAL_GAME_STRIKE, FINAL_GAME_STRIKE));
   }
 
   play(rolls) {
